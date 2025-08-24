@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  root: 'src',            // исходники в src
+  root: '.',            // исходники в src
   base: './',             // относительные пути к ресурсам
   build: {
     outDir: '../dist',    // собрать в dist на уровне корня проекта

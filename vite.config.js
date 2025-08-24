@@ -1,8 +1,12 @@
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  root: '.',       // если исходники в src
+  plugins: [react()],
+  root: 'src',            // исходники в src
+  base: './',             // относительные пути к ресурсам
   build: {
-    outDir: '../dist' // собираем в dist на уровне корня проекта
+    outDir: '../dist',    // собрать в dist на уровне корня проекта
+    emptyOutDir: true
   }
 })
